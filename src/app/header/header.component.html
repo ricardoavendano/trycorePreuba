@@ -1,0 +1,15 @@
+<header>
+  <nav class ="navbar navbar-expand-md navbar-dark bg-dark">  
+  <ul class="navbar-nav">
+    <li><a *ngIf="loginService.isUserLoggedIn()" routerLink="/logout" class="nav-link">LogOut</a></li>
+    <li><a *ngIf="loginService.isUserLoggedIn()" routerLink="/planeta-list" class="nav-link">Lista planetas</a></li>
+    <li><a *ngIf="loginService.isUserLoggedIn()" routerLink="/persona-list" class="nav-link">Lista personas</a></li>
+    <li><a *ngIf="loginService.isUserLoggedIn()" routerLink="/planeta-click-list" class="nav-link">Planetas click</a></li>
+    <li><a *ngIf="loginService.isUserLoggedIn()" routerLink="/persona-click-list" class="nav-link">Personas click</a></li>
+    <li><a *ngIf="!loginService.isUserLoggedIn()" routerLink="/login" class="nav-link">Login</a></li>   
+ 
+  </ul>
+  
+  </nav>
+  
+  </header>

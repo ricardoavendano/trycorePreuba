@@ -1,0 +1,43 @@
+<div class="container custom-container-2">
+  <div *ngIf="Personas.length !== 0">
+    <h3 class="mb-3 text-center">Personas {{Personas.length}}</h3>
+    <div class="col-md-12">
+        <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th scope="col">idPersona</th> 
+                <th scope="col">idPlaneta</th> 
+                <th scope="col">name</th>
+                <th scope="col">height</th>
+                <th scope="col">mass</th>
+                <th scope="col">hairColor</th>
+                <th scope="col">skinColor</th>
+                <th scope="col">eyeColor</th>
+                <th scope="col">birthYear</th>
+                <th scope="col">gender</th>
+                <th scope="col">detail</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let persona of Personas">
+                    <td>{{persona.idPersona}}</td>
+                    <td>{{persona.idPlaneta}}</td>
+                    <td>{{persona.name}}</td>
+                    <td>{{persona.height}}</td>
+                    <td>{{persona.mass}}</td>
+                    <td>{{persona.hairColor}}</td>
+                    <td>{{persona.skinColor}}</td>
+                    <td>{{persona.eyeColor}}</td>
+                    <td>{{persona.birthYear}}</td>
+                    <td>{{persona.gender}}</td>
+                    <td>
+                        <span class="btn btn-success btn-lg btn-block" (click)="agregarRegistroPersona(persona.idPersona, persona.idPlaneta, persona.name)">Detalle</span>
+                    </td>
+                </tr>
+            </tbody>
+          </table>
+    </div>
+
+  </div>
+
+</div>

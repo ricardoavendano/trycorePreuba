@@ -1,0 +1,43 @@
+<div class="container custom-container-2">
+  <div *ngIf="Planetas.length !== 0">
+    <h3 class="mb-3 text-center">Planetas {{Planetas.length}}</h3>
+    <div class="col-md-12">
+        <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th scope="col">id</th> 
+                <th scope="col">name</th> 
+                <th scope="col">rotationPeriod</th>
+                <th scope="col">orbitalPeriod</th>
+                <th scope="col">diameter</th>
+                <th scope="col">climate</th>
+                <th scope="col">gravity</th>
+                <th scope="col">terrain</th>
+                <th scope="col">surfaceWater</th>
+                <th scope="col">population</th>
+                <th scope="col">detail</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let planeta of Planetas">
+                    <td>{{planeta.idPlaneta}}</td>
+                    <td>{{planeta.name}}</td>
+                    <td>{{planeta.rotationPeriod}}</td>
+                    <td>{{planeta.orbitalPeriod}}</td>
+                    <td>{{planeta.climate}}</td>
+                    <td>{{planeta.diameter}}</td>
+                    <td>{{planeta.gravity}}</td>
+                    <td>{{planeta.terrain}}</td>
+                    <td>{{planeta.surfaceWater}}</td>
+                    <td>{{planeta.population}}</td>
+                    <td>
+                        <span class="btn btn-success btn-lg btn-block" (click)="agregarRegistroPlaneta(planeta.idPlaneta, planeta.name)">Detalle</span>
+                    </td>
+                </tr>
+            </tbody>
+          </table>
+    </div>
+  </div>
+</div>
+
+

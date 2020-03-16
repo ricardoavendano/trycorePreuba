@@ -1,0 +1,25 @@
+<div class="container custom-container-2">
+    <div *ngIf="PersonasClick.length !== 0">
+      <h3 class="mb-3 text-center">Personas Vistas {{PersonasClick.length}}</h3>
+      <div class="col-md-12">
+          <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th scope="col">idPersona</th> 
+                  <th scope="col">name</th>
+                  <th scope="col">contador</th>
+                </tr>
+              </thead>
+              <tbody>
+                  <tr *ngFor="let persona of PersonasClick">
+                      <td>{{persona.idPersona}}</td>
+                      <td>{{persona.name}}</td>
+                      <td>{{persona.contador}}</td>
+                  </tr>
+              </tbody>
+            </table>
+      </div>
+  
+    </div>
+  
+  </div>
